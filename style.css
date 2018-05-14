@@ -1,0 +1,110 @@
+html {
+    box-sizing: border-box;
+  }
+  
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    margin: 0;
+    background-color: #ffb6c1;
+  }
+
+:root {
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+button {
+    font-size: 150%; 
+    width: 100px;
+    padding: 20px;
+}
+
+button:focus {outline:0;}
+
+
+.calculator {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.2);
+    
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, [col] 100px ) ;
+    
+    color: #444;
+}
+
+
+
+.display {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: black;
+    color: white;
+    text-align: right;
+    grid-column: 1/5; 
+    padding: 20px;
+    font-size: 200%; 
+}
+
+
+.operators {
+    display: grid;
+    grid-template-columns: repeat(4, [col] 100px ) ;
+}
+.digits {
+    display: grid;
+    grid-template-columns: repeat(3, [col] 100px ) ;
+    grid-column: 1/ 4;
+    
+    
+}
+
+.digits :hover, .operators :hover , .eq :hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.digits :active, .operator :active, .eq :active {
+    opacity: .9;
+}
+
+
+.digit {
+    background-color: #444;
+    color: #fff;
+}
+
+.clear {
+    background-color: darkred;
+    color: #fff;
+
+}
+
+
+.zero {
+    border-bottom-left-radius: 10px;
+}
+.operator {
+    background-color: orange;
+    color: white;
+}
+
+
+.equals {
+    background-color: darkorange;
+    color: white;
+    border-bottom-right-radius: 10px;
+    height: 100%;
+}
